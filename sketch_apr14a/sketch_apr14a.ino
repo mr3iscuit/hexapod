@@ -1,5 +1,6 @@
+#include <Servo.h>
 #include <IRremote.hpp>
-#include<Servo>
+#define delayValue 1000
 // 3, 5, 6, 8, 10, 11 (servo)
 /*
 Servo upperLeft1, upperLeft2, upperLeft3;
@@ -23,7 +24,7 @@ void setup() {
 
 void loop() {
   group1Upper.write(0);
-  delay(1000);
+  delay(delayValue);
   group1Upper.write(180);
-  delay(1000);
+  delay(delayValue);
 }
