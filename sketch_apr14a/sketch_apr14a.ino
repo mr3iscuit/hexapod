@@ -1,20 +1,29 @@
 #include <IRremote.hpp>
 #include<Servo>
-// 3, 5, 6, 8, 9, 10, 11 (servo)
+// 3, 5, 6, 8, 10, 11 (servo)
+/*
 Servo upperLeft1, upperLeft2, upperLeft3;
 Servo bottomLeft1, bottomLeft2, bottomLeft3;
 Servo lowerLeft1, lowerLeft2, lowerLeft3;
 
-Servo upperLeft1, upperLeft2, upperLeft3;
-Servo bottomLeft1, bottomLeft2, bottomLeft3;
-Servo lowerLeft1, lowerLeft2, lowerLeft3;
+Servo upperRight1, upperRight2, upperRight3;
+Servo bottomRight1, bottomRight2, bottomRight3;
+Servo lowerRight1, lowerRight2, lowerRight3;
+*/
+
+Servo group1Upper;
+
 
 void setup() {
-  // put your setup code here, to run once:
+  group1Upper.attach(3);
+  group1Upper.write(90);
 
+  delay(1000);
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-
+  group1Upper.write(0);
+  delay(1000);
+  group1Upper.write(180);
+  delay(1000);
 }
